@@ -8,12 +8,16 @@ Download the CubeDataset from [**here**](https://ferhr.sharepoint.com/:f:/s/imag
 Folder structure should look similar to the following:
 ```
 - Cube-Dataset-Preprocessing/
-                            images/
-                                  | 1.png
-                                  | 2.png
-                                  ...
+                            data/
+                                Cube/
+                                    images/
+                                          | 1.png
+                                          | 2.png
+                                          ...
+                                    cube_gt.txt
                             CubeDataset.py
                             README.md
+                            datasets.py
 ```
 
 Run the following command:
@@ -26,4 +30,8 @@ Run the following command:
   To process multiple images ranging from n1 to n2
   ```
   python CubeDataset.py 15 245
+  ```
+  To dump processed images to pkl files
+  ```
+  python datasets.py
   ```
