@@ -5,7 +5,7 @@ import sys
 
 def apply_changes(i=1, mask=1, save=1):
 
-    file_path = 'images/' + str(i)+'.png'
+    file_path = 'data/Cube/images/' + str(i)+'.png'
 
     print('processing: '+str(i)+'.png ...')
     img = np.array(cv2.imread(file_path, -1), dtype='float32')
@@ -28,7 +28,7 @@ def apply_changes(i=1, mask=1, save=1):
     img1 = img[...,[2,1,0]]
 
     if(save==1):
-        file_path_op = 'images/' + str(i)+'_p.png'
+        file_path_op = 'data/Cube/images/' + str(i)+'_p.png'
         scipy.misc.toimage(img1,cmin=0.0).save(file_path_op)
         print('done: ' + file_path_op)
 
@@ -40,6 +40,5 @@ if __name__ == '__main__':
     elif(len(sys.argv)==2):
         apply_changes(sys.argv[1])
     elif(len(sys.argv)==3):
-        print(sys.argv)
         for i in range(int(sys.argv[1]), int(sys.argv[2])+1):
             apply_changes(i)
