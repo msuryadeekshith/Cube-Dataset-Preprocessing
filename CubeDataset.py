@@ -16,7 +16,7 @@ def apply_changes(i=1, mask=1, save=1):
     img.clip(0)
 
     m = np.zeros((img.shape[0], img.shape[1]))
-    for ch in range(0,2):
+    for ch in range(0,3):
         m = np.logical_or(m, img[:,:,ch] >= (saturation_level - black_level))
 
     if(mask!=0):
