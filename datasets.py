@@ -319,7 +319,7 @@ class CubeDataSet(DataSet):
     img = img - black_level
     img.clip(0)
     m = np.zeros((img.shape[0], img.shape[1]))
-    for ch in range(0,2):
+    for ch in range(0,3):
         m = np.logical_or(m, img[:,:,ch] >= (saturation_level - black_level))
     if(mask!=0):
         m[1050:m.shape[0], 2050:m.shape[1]]
