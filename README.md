@@ -31,7 +31,7 @@ Run the following command:
   ```
   python CubeDataset.py 15 245
   ```
-  To dump processed images to pkl files
+  To dump processed images to pkl files (datasets incorporated from [**fc4**](https://github.com/yuanming-hu/fc4))
   ```
   python datasets.py
   ```
